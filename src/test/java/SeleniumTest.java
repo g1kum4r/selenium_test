@@ -1,38 +1,39 @@
-import com.selenium.webdriver.java.model.page.Chapter1Page;
-import com.selenium.webdriver.java.model.page.HomePage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import com.codeborne.selenide.Condition;
 import org.testng.annotations.Test;
+import test.selenium.webpage.Chapter1Page;
+import test.selenium.webpage.HomePage;
 
 public class SeleniumTest {
 
-    WebDriver driver;
-
-    @BeforeTest
-    public void setUp(){
-        System.setProperty("webdriver.chrome.driver", "C:/webdriver/chrome/chromedriver.exe");
-        driver = new ChromeDriver();
-    }
 
     @Test
-    public void test_01() throws InterruptedException {
-        // Optional. If not specified, WebDriver searches the PATH for chromedriver.
-        driver.get("http://book.theautomatedtester.co.uk/");
-        HomePage homePage = new HomePage(driver);
-        Thread.sleep(2000);  // Let the user actually see something!
-        homePage.goToChapter1();
-        Thread.sleep(2000);  // Let the user actually see something!
-        Chapter1Page chapter1Page = new Chapter1Page(driver);
-        Assert.assertEquals(chapter1Page.getTextFromDivOnTheLeft(), "Assert that this text is on the page");
+    public void testBookTheAutomatedTesterWebPage() {
+//        Open the home page
+        HomePage homePage = HomePage.open();
+        try {
+            Thread.sleep(2000);  // Let the user actually see something!
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+//        from Home Page, go to chapter 1 page
+        Chapter1Page chapter1Page = homePage.goToChapter1();
+        try {
+            Thread.sleep(2000);  // Let the user actually see something!
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+//        Assert that the text exists on chapter 1 page
+        chapter1Page.getTextFromDivOnTheLeft().shouldHave(Condition.text("Assert that this text is on the page"));
+
+//       from Chapter 1 page, back to Home page
         chapter1Page.goToHomePage();
-        Thread.sleep(2000);  // Let the user actually see something!
+        try {
+            Thread.sleep(2000);  // Let the user actually see something!
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
-    @AfterTest
-    public void quitDriver(){
-        driver.quit();
-    }
 }
