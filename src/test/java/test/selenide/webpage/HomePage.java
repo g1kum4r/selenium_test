@@ -33,6 +33,5 @@ public class HomePage {
     public Chapter1Page goToChapter1() {
         $(By.linkText("Chapter1")).click();
         return page(Chapter1Page.class);
-//        chapter1Link.click();
     }
 }
