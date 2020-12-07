@@ -3,11 +3,11 @@ import org.testng.annotations.Test;
 import test.selenide.webpage.Chapter1Page;
 import test.selenide.webpage.HomePage;
 
-public class SeleniumTest {
+public class BookTheAutomatedTesterTest {
 
 
     @Test
-    public void testBookTheAutomatedTesterWebPage() {
+    public void testHomePageAndChapter1Page() {
 //        Open the home page
         HomePage homePage = HomePage.open();
         try {
