@@ -1,10 +1,10 @@
-package test.selenium.webpage;
+package test.selenide.webpage;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.page;
 
 
 public class Chapter1Page {
@@ -18,7 +18,7 @@ public class Chapter1Page {
 
     public HomePage goToHomePage() {
         $(By.linkText("Home Page")).click();
-        return page(HomePage.class);
+        return Selenide.page(HomePage.class);
     }
 
 

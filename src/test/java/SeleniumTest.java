@@ -1,7 +1,7 @@
 import com.codeborne.selenide.Condition;
 import org.testng.annotations.Test;
-import test.selenium.webpage.Chapter1Page;
-import test.selenium.webpage.HomePage;
+import test.selenide.webpage.Chapter1Page;
+import test.selenide.webpage.HomePage;
 
 public class SeleniumTest {
 
