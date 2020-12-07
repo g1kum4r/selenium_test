@@ -3,9 +3,9 @@
 
 <suite name="Suite1">
 
-    <test name="seleniumTest">
+    <test name="bookTheAutomatedTesterTest">
         <classes>
-            <class name="SeleniumTest"/>
+            <class name="BookTheAutomatedTesterTest"/>
         </classes>
     </test>
 

@@ -9,5 +9,5 @@
 2. update the maven dependency
 3. run the test 
     1. run the mvn command **mvn clean test** in the root directory of the project
-    2. or run the SeleniumTest file
+    2. or run the BookTheAutomatedTesterTest file
    
