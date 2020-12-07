@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 
 /**
- * Chapter 1 Page
+ * @author Jeevan
  */
 public class Chapter1Page {
 
@@ -16,14 +16,14 @@ public class Chapter1Page {
     }
 
     /**
-     * @return SelenideElement selenide element, div on the left in chapter 1 page
+     * @return SelenideElement
      */
     public SelenideElement getDivOnTheLeft() {
         return $("#divontheleft");
     }
 
     /**
-     * @return HomePage return to HomePage from chapter 1, through clicking the Home Page link
+     * @return HomePage
      */
     public HomePage goToHomePage() {
         $(By.linkText("Home Page")).click();

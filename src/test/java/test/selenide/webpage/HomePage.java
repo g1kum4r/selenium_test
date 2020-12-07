@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.page;
 
 /**
- * Home Page
+ * @author Jeevan
  */
 public class HomePage {
 
@@ -18,7 +18,7 @@ public class HomePage {
 
 
     /**
-     * @return HomePage return home page instance, through open it on browser
+     * @return HomePage
      */
     public static HomePage open() {
         if (homePage == null) {
@@ -28,7 +28,7 @@ public class HomePage {
     }
 
     /**
-     * @return Chapter1Page go to chapter1 page through click the chapter1 link
+     * @return Chapter1Page
      */
     public Chapter1Page goToChapter1() {
         $(By.linkText("Chapter1")).click();
