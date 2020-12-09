@@ -1,6 +1,7 @@
 # Selenide, Selenium WebDriver and TestNG
 
 ##### Dependencies
+* Java 12
 * TestNG 6.14.3
 * Selenide 5.16.2
 
