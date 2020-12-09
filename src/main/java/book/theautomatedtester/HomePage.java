@@ -1,4 +1,4 @@
-package test.selenide.webpage;
+package book.theautomatedtester;
 
 import com.codeborne.selenide.Selenide;
 import org.openqa.selenium.By;
@@ -13,6 +13,6 @@ public class HomePage {
 
     public Chapter1Page goToChapter1() {
         $(By.linkText("Chapter1")).click();
-        return page(Chapter1Page.class);
+        return Selenide.page(Chapter1Page.class);
     }
 }

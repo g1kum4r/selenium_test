@@ -1,10 +1,10 @@
 package test.selenide;
 
+import book.theautomatedtester.Chapter1Page;
+import book.theautomatedtester.HomePage;
 import com.codeborne.selenide.Condition;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-import test.selenide.webpage.Chapter1Page;
-import test.selenide.webpage.HomePage;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -17,15 +17,17 @@ import static com.codeborne.selenide.Selenide.open;
  */
 public class BookTheAutomatedTesterTest {
 
-    private static final String KEY_HOME_URL = "booktheautomatedtester.home.url";
-    private static final String APPLICATION_TEST_PROPERTY_FILE = "application.test.properties";
-    private Properties properties = null;
+    private final String KEY_HOME_URL = "booktheautomatedtester.home.url";
+    private final String APPLICATION_TEST_PROPERTY_FILE = "application.test.properties";
+
+    Properties properties = null;
 
     @BeforeSuite
     public void beforeSuit() throws IOException {
         properties = new Properties();
         properties.load(new FileInputStream(getClass().getClassLoader().getResource(APPLICATION_TEST_PROPERTY_FILE).getFile()));
     }
+
 
     @Test
     public void testHomePageAndChapter1Page() {

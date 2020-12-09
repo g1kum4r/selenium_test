@@ -1,10 +1,10 @@
-package test.selenide.webpage;
+package book.theautomatedtester;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.page;
 
 /**
  * @author Jeevan
@@ -17,7 +17,7 @@ public class Chapter1Page {
 
     public HomePage goToHomePage() {
         $(By.linkText("Home Page")).click();
-        return page(HomePage.class);
+        return Selenide.page(HomePage.class);
     }
 
 }
