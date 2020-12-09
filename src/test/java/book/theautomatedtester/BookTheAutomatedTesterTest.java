@@ -1,7 +1,5 @@
-package test.selenide;
+package book.theautomatedtester;
 
-import book.theautomatedtester.Chapter1Page;
-import book.theautomatedtester.HomePage;
 import com.codeborne.selenide.Condition;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -27,7 +25,6 @@ public class BookTheAutomatedTesterTest {
         properties = new Properties();
         properties.load(new FileInputStream(getClass().getClassLoader().getResource(APPLICATION_TEST_PROPERTY_FILE).getFile()));
     }
-
 
     @Test
     public void testHomePageAndChapter1Page() {
