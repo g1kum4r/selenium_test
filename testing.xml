@@ -5,7 +5,7 @@
 
     <test name="bookTheAutomatedTesterTest">
         <classes>
-            <class name="test.selenide.BookTheAutomatedTesterTest"/>
+            <class name="book.theautomatedtester.BookTheAutomatedTesterTest"/>
         </classes>
     </test>
 
